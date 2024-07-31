@@ -19,7 +19,7 @@ export default {
                 <div class="content px-0" v-for="card in store.CharactersList">
                         <img :src="img.image_url" alt="" v-for="(img, index) in card.card_images">
                         <div class="bg-orange">
-                            <p>{{ card.name }}</p>
+                            <p class="pt-2 fw-bold">{{ card.name }}</p>
                             <p class="text-dark"> {{ card.type }} </p>
                         </div>
                 </div>

@@ -12,11 +12,11 @@ export default {
 
 <template>
         <div class="text-white bg-dark p-2">
-            Found ........ cards
+            <span class="fw-bolder">Found {{ store.CharactersList.length }} cards</span>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="content" v-for="card in store.CharactersList">
+            <div class="row p-0 justify-content-between">
+                <div class="content px-0" v-for="card in store.CharactersList">
                         <img :src="img.image_url" alt="" v-for="(img, index) in card.card_images">
                         <div class="bg-orange">
                             <p>{{ card.name }}</p>
@@ -29,14 +29,16 @@ export default {
 
 <style lang="scss" scoped>
     .container{
+        padding: 0px 7px;
 
         .row{
             height: 100%;
 
             .content{
-                margin-bottom: 20px;
-                width: calc(100% / 5);
+                margin: 0px 5px 20px 5px;
+                width: calc(100% / 5 - 20px);
                 text-align: center;
+                
 
                 img{
                     width: 100%;

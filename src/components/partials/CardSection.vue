@@ -24,7 +24,7 @@ export default {
                         <img :src="img.image_url" alt="" v-for="(img, index) in card.card_images">
                         <div class="bg-orange">
                             <p>{{ card.name }}</p>
-                            
+                            <p class="text-dark"> {{ card.type }} </p>
                         </div>
                 </div>
             </div>

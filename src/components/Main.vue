@@ -6,9 +6,10 @@ export default {
     components:{
         CardSection,
     },
+    
     data(){
         return{
-            CharactersList:[]
+            
         }
     }
     

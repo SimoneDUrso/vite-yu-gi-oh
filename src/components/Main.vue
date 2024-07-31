@@ -22,7 +22,7 @@ export default {
                 <div class="row">
                     <div class="col-12">
                         <div>
-                            <CardSection :data="CharactersList"/>
+                            <CardSection />
                         </div>
                     </div>
                 </div>

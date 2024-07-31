@@ -2,10 +2,6 @@
 import { store } from '../../store';
 
 export default {
-    props:{
-        data: Object
-    },
-
     data(){
         return{
             store,
@@ -38,7 +34,6 @@ export default {
             height: 100%;
 
             .content{
-                border: 1px dashed black;
                 margin-bottom: 20px;
                 width: calc(100% / 5);
                 text-align: center;

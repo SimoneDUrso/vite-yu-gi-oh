@@ -21,7 +21,10 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="content" v-for="card in store.CharactersList">
-                        <img :src="img.image_url" alt="" v-for="img, index in card.card_images" class="img-fluid">
+                        <img :src="img.image_url" alt="" v-for="(img, index) in card.card_images">
+                        <div class="bg-orange">
+                            
+                        </div>
                 </div>
             </div>
         </div>
@@ -29,15 +32,28 @@ export default {
 
 <style lang="scss" scoped>
     .container{
-        height: 800px;
+
         .row{
             height: 100%;
 
             .content{
                 border: 1px dashed black;
-                margin: 10px 10px;
-                width: calc(100% / 5 - 20px);
-                height: 300px;
+                margin-bottom: 20px;
+                width: calc(100% / 5);
+                text-align: center;
+
+                img{
+                    width: 100%;
+                }
+
+                .bg-orange{
+                    background-color: rgb(197, 130, 5);
+                    min-height: 100px;
+                }
+
+                p{
+                    color: white;
+                }
             }
         }
     }

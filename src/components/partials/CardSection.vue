@@ -17,6 +17,7 @@ export default {
         <div class="container">
             <div class="row p-0 justify-content-between">
                 <div class="content px-0" v-for="card in store.CharactersList">
+                    <!-- sotto facciamo un altro for per  -->
                         <img :src="img.image_url" alt="" v-for="(img, index) in card.card_images">
                         <div class="bg-orange">
                             <p class="pt-2 fw-bold">{{ card.name }}</p>

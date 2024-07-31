@@ -1,5 +1,16 @@
 <script>
+import CardSection from './partials/CardSection.vue';
+import { store } from '../store';
+
 export default {
+    components:{
+        CardSection,
+    },
+    data(){
+        return{
+            CharactersList:[]
+        }
+    }
     
 }
 </script>
@@ -7,7 +18,13 @@ export default {
     <main>
         <!-- QUI CI VA LA SELECT -->
         <div class="container">
-            
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <CardSection :data="CharactersList"/>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </template>
@@ -21,6 +38,10 @@ export default {
         .container{
             height: 600px;
             background-color: white;
+        }
+
+        .col-12{
+            padding: 20px;
         }
     }
 </style>

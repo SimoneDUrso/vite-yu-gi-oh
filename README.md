@@ -16,4 +16,6 @@ Buon lavoro!
 
 <!-- SCOMPOSIZIONE PROBLEMA -->
 
-1 - 
+1 - Faccio una funzione per la chiamata Axios nell'App.vue;
+2 - Creo delle componenti per l'header ed il main;
+3 - Creo una sottocomponente cardSection che richiamo all'interno del main;

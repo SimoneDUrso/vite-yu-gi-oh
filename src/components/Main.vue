@@ -17,11 +17,13 @@ export default {
 <template>
     <main>
         <!-- QUI CI VA LA SELECT -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div>
-                        <CardSection :data="CharactersList"/>
+        <div class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <CardSection :data="CharactersList"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,11 +35,11 @@ export default {
     main{
         height: 100vh;
         background-color: rgb(197, 130, 5);
-        padding-top: 50px;
+        padding: 50px 150px;
 
-        .container{
-            height: 600px;
-            background-color: white;
+        .bg-white{
+        width: 1000px;
+        margin: 0 auto;   
         }
 
         .col-12{

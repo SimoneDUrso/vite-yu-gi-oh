@@ -16,10 +16,15 @@ export default {
     }
   },
 
+  created(){
+    this.getCharactersList();
+  },
+
   methods:{
     getCharactersList(){
       axios.get(store.apiUrl).then((result) => {
-        store.charactersList = result.data
+        store.CharactersList = result.data.data
+        
       })
     },
   }
@@ -31,6 +36,8 @@ export default {
     <Main />
   </div>
 </template>
+
 <style lang="scss">
-  
+  @use "./styles/generals.scss"
+
 </style>

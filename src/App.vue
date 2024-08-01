@@ -22,7 +22,7 @@ export default {
 
   methods:{
     getCharactersList(){
-      axios.get(store.apiUrl).then((result) => {
+      axios.get(`${store.apiUrl}${store.apiCard}`).then((result) => {
         store.CharactersList = result.data.data
         
       })

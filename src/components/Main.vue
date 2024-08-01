@@ -14,34 +14,23 @@ export default {
         }
     },
 
-    created(){
-        this.getArchetype()
-    },
-    
     methods:{
-        getArchetype(){
-            axios.get(`${store.apiUrl}${store.apiArchetype}`).then((result) =>{
-                for(let i=0; i<10; i++){
-                    store.archetypeList.push(result.data[i])
-                    console.log(result.data[i])
-                }
-            })
-        }
-    }
+        takeArchetype(){
+            this.$emit('filter')
+        },
+
+        
+    },
+
 }
 </script>
 <template>
     <main>
         <!-- QUI CI VA LA SELECT -->
         <div class="container-select">
-            <select class="select-control" name="type" id="type" v-model="store.archetype">
+            <select class="select-control" name="type" id="type" v-model="store.archetype" @change="takeArchetype">
                 <option value="">Seleziona il tipo di carta</option>
                 <option v-for="archetype, index in store.archetypeList" :key="`al-${index}`" :value="archetype.archetype_name"> {{archetype.archetype_name}} </option>
-                
-                <!-- <option value="Infernoble Arms">Infernoble Arms</option>
-                <option value="Noble Knight">Noble Knight</option>
-                <option value="Melodious">Melodious</option>
-                <option value="Archfiend">Archfiend</option> -->
             </select>
         </div>
         <div class="bg-white">

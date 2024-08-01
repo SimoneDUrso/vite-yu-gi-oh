@@ -47,7 +47,7 @@ export default {
 
                 .bg-orange{
                     background-color: rgb(197, 130, 5);
-                    min-height: 100px;
+                    min-height: 150px;
                 }
 
                 p{

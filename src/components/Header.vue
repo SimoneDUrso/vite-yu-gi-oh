@@ -15,6 +15,7 @@ export default {
         padding-left: 20px;
         display: flex;
         align-items: center;
+        background-color: white;
 
             img{
                 width: 100px;
